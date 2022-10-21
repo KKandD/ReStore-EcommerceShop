@@ -5,9 +5,9 @@ import { Container } from "@mui/system";
 import { useState } from "react";
 import { Route } from "react-router-dom";
 import HomePage from "../../features/home/HomePage";
-import ProductDetails from "../../features/ProductDetails";
 import AboutPage from "../../features/about/AboutPage";
 import ContactPage from "../../features/contact/ContactPage";
+import ProductDetails from "../../features/catalog/ProductDetails";
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
 
   const theme = createTheme({
     palette: {
-      mode: 'dark',
+      mode: darkMode ? 'dark' : 'light',
       background: {
         default: paletteType === 'light' ? '#eaeaea' : '#121212'
       }
